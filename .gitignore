@@ -1,0 +1,56 @@
+# --- IntelliJ IDEA (Crítico) ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# --- Java (Binarios y Bytecode) ---
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- Build Tools (Maven & Gradle) ---
+# Aunque ahora usamos el builder de IntelliJ, pronto usaremos estos.
+target/
+.mvn/
+mvnw
+mvnw.cmd
+.gradle/
+build/
+gradlew
+gradlew.bat
+
+# --- Eclipse (Por si cambio de PC o colaboró) ---
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.project
+.classpath
+.factorypath
+
+# --- VS Code ---
+.vscode/
+
+# --- Mac OS ---
+.DS_Store
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
