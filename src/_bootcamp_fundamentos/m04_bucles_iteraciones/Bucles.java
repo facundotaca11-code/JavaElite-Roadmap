@@ -1,4 +1,4 @@
-package m04_bucles_iteraciones;
+package _bootcamp_fundamentos.m04_bucles_iteraciones;
 
 public class Bucles {
     public static void main(String[] args) {

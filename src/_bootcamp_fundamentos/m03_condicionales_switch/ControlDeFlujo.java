@@ -1,4 +1,4 @@
-package m03_condicionales_switch;
+package _bootcamp_fundamentos.m03_condicionales_switch;
 
 public class ControlDeFlujo {
     public static void main(String[] args) {

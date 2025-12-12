@@ -1,4 +1,4 @@
-package m02_tipos_datos_memoria;
+package _bootcamp_fundamentos.m02_tipos_datos_memoria;
 
 public class TipoDeDatos {
     public static void main(String[] args) {

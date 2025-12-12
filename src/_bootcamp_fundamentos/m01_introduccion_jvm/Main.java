@@ -1,4 +1,4 @@
-package m01_introduccion_jvm;
+package _bootcamp_fundamentos.m01_introduccion_jvm;
 
 public class Main {
     public static void main(String[] args) {
