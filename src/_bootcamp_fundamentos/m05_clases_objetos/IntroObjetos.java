@@ -2,24 +2,37 @@ package _bootcamp_fundamentos.m05_clases_objetos;
 
 public class IntroObjetos {
 
-    // 1. Definimos un "Molde" (Record) para un Videojuego.
-    // Esto le enseña a Java qué es un "Videojuego".
-    record Videojuego(String titulo, String genero, double precio) {}
+    // ✅ Record con un MÉTODO (Comportamiento)
+    record Videojuego(String titulo, String genero, double precio) {
+
+        // Este método vive DENTRO del objeto.
+        // "this" se refiere a los datos de ESTA instancia específica.
+        public double calcularPrecioConDescuento(int porcentajeDescuento) {
+            double descuento = this.precio * (porcentajeDescuento / 100.0);
+            return this.precio - descuento;
+        }
+
+        // Método para imprimir bonito (formato personalizado)
+        public String fichaTecnica() {
+            return """
+                   --- FICHA JUEGO ---
+                   Título: %s
+                   Género: %s
+                   Precio: $%.2f
+                   -------------------
+                   """.formatted(titulo(), genero(), precio()); // En records usamos nombre() no getNombre()
+        }
+    }
 
     public static void main(String[] args) {
-        // ANTES (Lo que hacías en m02): Variables sueltas, difícil de manejar
-        String tituloJuego1 = "Super Mario";
-        String generoJuego1 = "Plataformas";
-        double precioJuego1 = 59.99;
+        Videojuego eldenRing = new Videojuego("Elden Ring", "RPG", 60.00);
 
-        // AHORA (POO): Agrupamos todo en un solo Objeto
-        Videojuego juego1 = new Videojuego("Elden Ring", "RPG", 69.99);
-        Videojuego juego2 = new Videojuego("FIFA 24", "Deportes", 49.99);
+        // 1. Pedimos al objeto que nos dé su ficha
+        System.out.println(eldenRing.fichaTecnica());
 
-        //  Podemos imprimir todo el paquete junto
-        System.out.println("Juego 1: " + juego1);
+        // 2. Pedimos al objeto que calcule su descuento
+        double precioFinal = eldenRing.calcularPrecioConDescuento(50); // 50% off
 
-        // O acceder a partes especificas
-        System.out.println("El genero de " + juego2.titulo() + " es " + juego2.genero());
+        System.out.println("Precio Oferta: $" + precioFinal);
     }
 }
