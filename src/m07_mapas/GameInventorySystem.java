@@ -22,10 +22,10 @@ public class GameInventorySystem {
 
         while (true) {
             System.out.println("\n=== 📦 GAME INVENTORY SYSTEM v1.0 ===");
-            System.out.println("1. 🔎 Search Game (Read)");
-            System.out.println("2. ➕ Add Game (Create)");
-            System.out.println("3. ✏️ Update Price (Update)");
-            System.out.println("4. 🗑️ Delete Game (Delete)");
+            System.out.println("1. 🔎 Search Game (Read - get)");
+            System.out.println("2. ➕ Add Game (Create - put)");
+            System.out.println("3. ✏️ Update Price (Update - put)");
+            System.out.println("4. 🗑️ Delete Game (Delete - remove)");
             System.out.println("5. 🚪 Exit");
             System.out.print("Select option: ");
 
